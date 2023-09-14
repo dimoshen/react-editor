@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import './Item.scss';
-import { Icon, IconType } from '../Icon/Icon';
+import { Icon } from '../Icon/Icon';
+import { ItemType } from '../../types/ItemType';
 
 interface Props {
-  toolType: IconType;
+  toolType: ItemType;
 }
 
 export const Item: FC<Props> = ({toolType}) => {

@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import './Workspace.scss';
 import { Item } from '../Item/Item';
-import { IconType } from '../Icon/Icon';
+import { ItemType } from '../../types/ItemType';
 
-const workplaceItems: IconType[] = ['headline', 'paragraph', 'button', 'image'];
+const workplaceItems: ItemType[] = ['headline', 'paragraph', 'button', 'image'];
 
 export const Workspace: FC = () => {
   return (
