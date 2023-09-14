@@ -1,0 +1,17 @@
+.Item {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  cursor: grab;
+
+  &__title {
+    color: #252A32;
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+}

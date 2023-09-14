@@ -1,0 +1,14 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: $gray-primary;
+}
+
+body {
+  overflow-x: hidden;
+}

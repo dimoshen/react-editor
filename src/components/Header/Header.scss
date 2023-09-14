@@ -1,0 +1,18 @@
+@import "../../styles/utils/variables";
+
+.Header {
+  position: sticky;
+  top: 0;
+  padding-left: 30px;
+  display: flex;
+  border: 1px solid #E4E6F1;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px; 
+
+  &__title {
+    height: $header-height;
+    line-height: 70px;
+    font-family: 'Roboto-Medium', sans-serif;
+  };
+}
+
