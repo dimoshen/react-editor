@@ -4,14 +4,14 @@ import { ReactSVG } from 'react-svg';
 import headline from '../../assets/icons/headline.svg';
 import image from '../../assets/icons/image.svg';
 import paragparh from '../../assets/icons/paragraph.svg';
-import { ItemType } from '../../types/ItemType';
+import { ToolType } from '../../types/ToolType';
 
 import './Icon.scss';
 
 interface Props {
   children?: ReactNode;
   size: number;
-  type: ItemType;
+  type: ToolType;
 }
 
 export const Icon: FC<Props> = ({ children, size, type }) => {

@@ -1,8 +1,8 @@
 import { createSlice,  PayloadAction } from "@reduxjs/toolkit";
-import { ItemType } from "../../types/ItemType";
+import { ToolType } from "../../types/ToolType";
 
 type ItemsState = {
-  items: ItemType[];
+  items: ToolType[];
   // loading: boolean;
   // error: string;
 };
@@ -17,13 +17,13 @@ const itemsSlice = createSlice({
   name: 'items',
   initialState,
   reducers: {
-    set: (state, action: PayloadAction<ItemType[]>) => {
-      state.items = action.payload;
-    },
-    add: (state, action: PayloadAction<ItemType>) => {
+    // set: (state, action: PayloadAction<ToolType[]>) => {
+    //   state.items = action.payload;
+    // },
+    add: (state, action: PayloadAction<ToolType>) => {
       state.items.push(action.payload);
     },
-    remove: (state, action: PayloadAction<ItemType>) => {
+    remove: (state, action: PayloadAction<ToolType>) => {
       state.items = state.items.filter(item => item !== action.payload);
     }
   }  

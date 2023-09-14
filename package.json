@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
     "react-svg": "^16.1.24",
-    "sass": "^1.67.0"
+    "sass": "^1.67.0",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

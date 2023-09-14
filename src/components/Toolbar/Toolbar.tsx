@@ -1,26 +1,24 @@
-import { FC, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import * as itemsApi from '../../api/items';
-import './Toolbar.scss';
 import { ToolbarItem } from '../ToolbarItem';
+import { ToolType } from '../../types/ToolType';
 
-import { actions as itemsActions  } from '../../redux/features/items';
-import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
+import './Toolbar.scss';
 
 export const Toolbar: FC = () => {
-  const dispatch = useAppDispatch();
-  const { items } = useAppSelector(state => state.items)
+  const [tools, setTools] = useState<ToolType[]>([]);
 
   useEffect(() => {
     itemsApi.getAll()
-      .then(itemsFromServer => {
-        dispatch(itemsActions.set(itemsFromServer));
+      .then(toolsFromServer => {
+        setTools(toolsFromServer);
       });
-  }, [dispatch])
+  }, [])
 
   return (
     <div className="Toolbar">
-      {items.map(item => (
-        <ToolbarItem key={item} toolType={item} />
+      {tools.map(tool => (
+        <ToolbarItem key={tool} toolType={tool} />
       ))}
     </div>
   );

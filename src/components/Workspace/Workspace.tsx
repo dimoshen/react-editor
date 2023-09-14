@@ -1,14 +1,15 @@
 import { FC } from 'react';
 import './Workspace.scss';
 import { Item } from '../Item/Item';
-import { ItemType } from '../../types/ItemType';
 
-const workplaceItems: ItemType[] = ['headline', 'paragraph', 'button', 'image'];
+import { useAppSelector } from '../../redux/hooks/hooks';
 
 export const Workspace: FC = () => {
+  const { items } = useAppSelector(state => state.items)
+
   return (
     <div className="Workspace">
-      {workplaceItems.map(item => (
+      {items.map(item => (
         <Item key={item} toolType={item} />
       ))}
     </div>
