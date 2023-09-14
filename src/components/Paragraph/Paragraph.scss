@@ -1,0 +1,9 @@
+@import "../../styles/utils/variables";
+
+.Paragraph {
+
+  &__content {
+    color: $paragraph;
+    line-height: 20px;
+  }
+}

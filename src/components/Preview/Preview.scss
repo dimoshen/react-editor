@@ -1,4 +1,8 @@
 .Preview {
   height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   font-family: 'Roboto-Regular', sans-serif;
 }
