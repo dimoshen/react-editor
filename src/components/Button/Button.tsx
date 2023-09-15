@@ -2,10 +2,14 @@ import { FC } from 'react';
 
 import './Button.scss';
 
-export const Button: FC = () => {
+interface Props {
+  content: string;
+}
+
+export const Button: FC<Props> = ({ content }) => {
   return (
     <button className='Button'>
-      Register now
+      {content}
     </button>
   );
 };

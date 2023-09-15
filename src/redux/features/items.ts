@@ -10,7 +10,7 @@ const initialState: ItemsState = {
 };
 
 const itemsSlice = createSlice({
-  name: 'items',
+  name: 'workspaceItems',
   initialState,
   reducers: {
     set: (state, action: PayloadAction<WorkspaceItem[]>) => {
@@ -34,6 +34,12 @@ const itemsSlice = createSlice({
         [state.items[index], state.items[index + 1]] = [state.items[index + 1], state.items[index]];
       }
     },
+    updateContent: (state, action: PayloadAction<{id: string, content: string}>) => {
+      const item = state.items.find(item => item.id === action.payload.id);
+      if (item) {
+        item.content = action.payload.content;
+      }
+    }
   }  
 })
 

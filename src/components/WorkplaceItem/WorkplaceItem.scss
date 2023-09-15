@@ -2,19 +2,21 @@
 
 .WorkplaceItem {
   position: relative;
-  height: 80px;
+  height: auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 12px;
   background-color: #FFFFFF;
   border-radius: 6px;
   cursor: grab;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, max-height 0.3s ease-in-out;
 
   &.active {
     background-color: #D9E7FF;
+    max-height: 200px;
   }
 
   &__title {

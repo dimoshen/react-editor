@@ -5,6 +5,7 @@ import { ToolType } from '../../types/ToolType';
 import { Toolbar } from '../Toolbar';
 
 import './WorkplaceItem.scss';
+import { TextForm } from '../TextForm';
 
 interface Props {
   toolType: ToolType;
@@ -19,13 +20,16 @@ export const WorkplaceItem: FC<Props> = ({ toolType, isActive, onActivate, itemI
       className={classNames("WorkplaceItem", { 'active': isActive })}
       onClick={onActivate}
     >
-      {isActive && (
-        <Toolbar itemId={itemId}/>
-      )}
       <Icon size={20} type={toolType} />
       <div className="WorkplaceItem__title">
         {toolType}
       </div>
+      {isActive && (
+        <>
+          <Toolbar itemId={itemId}/>
+          {toolType !== 'image' && <TextForm itemId={itemId}/>}
+        </>
+      )}
     </div>
   );
 };

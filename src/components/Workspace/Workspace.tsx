@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautiful-dnd';
 import { WorkplaceItem } from '../WorkplaceItem/WorkplaceItem';
 import { useAppSelector } from '../../redux/hooks/hooks';
@@ -28,8 +28,6 @@ export const Workspace: FC = () => {
     
     dispatch(actions.set(reorderedItems));
   };
-
-  useEffect(() => console.log(items), [items])
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>

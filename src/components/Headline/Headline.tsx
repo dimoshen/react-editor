@@ -2,11 +2,16 @@ import { FC } from 'react';
 
 import './Headline.scss';
 
-export const Headline: FC = () => {
+
+interface Props {
+  content: string;
+}
+
+export const Headline: FC<Props> = ({ content }) => {
   return (
     <section className='Headline'>
       <h2 className='Headline__content'>
-        A legendary cap set that feels like new
+        {content}
       </h2>
     </section>
   );
