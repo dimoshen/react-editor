@@ -1,23 +1,19 @@
 @import "../../styles/utils/variables";
 
-.ToolbarItem {
-  width: 100px;
+.WorkplaceItem {
   height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background-color: $item-background;
+  background-color: #FFFFFF;
   border-radius: 6px;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
+  cursor: grab;
+  transition: background-color 0.3s ease-in-out;
 
-  &:hover {
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-  }
-  &:active {
-    box-shadow: none;
+  &.active {
+    background-color: #D9E7FF;
   }
 
   &__title {

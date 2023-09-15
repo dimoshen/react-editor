@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './Workspace.scss';
-import { Item } from '../Item/Item';
+import { Item } from '../WorkplaceItem/WorkplaceItem';
 
 import { useAppSelector } from '../../redux/hooks/hooks';
 

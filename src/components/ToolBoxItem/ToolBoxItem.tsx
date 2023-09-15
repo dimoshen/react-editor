@@ -1,16 +1,17 @@
 import { FC } from 'react';
-import './ToolbarItem.scss';
 import { Icon } from '../Icon/Icon';
 import { ToolType } from '../../types/ToolType';
 
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { actions } from '../../redux/features/items';
 
+import './ToolBoxItem.scss';
+
 interface Props {
   toolType: ToolType;
 }
 
-export const ToolbarItem: FC<Props> = ({toolType}) => {
+export const ToolBoxItem: FC<Props> = ({toolType}) => {
   const dispatch = useAppDispatch();
 
   const handleAddNewItem = () => {
@@ -18,11 +19,11 @@ export const ToolbarItem: FC<Props> = ({toolType}) => {
   }
 
   return (
-    <div className="ToolbarItem" onClick={handleAddNewItem}>
+    <div className="ToolBoxItem" onClick={handleAddNewItem}>
 
       <Icon size={20} type={toolType} />
 
-      <div className="ToolbarItem__title">
+      <div className="ToolBoxItem__title">
         {toolType}
       </div>
     </div>
