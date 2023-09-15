@@ -1,10 +1,21 @@
-### Block ManagementMini Constructor: React + TypeScript + Vite
+# Block ManagementMini Constructor: React + TypeScript + Vite
 ===========================================
 
 ### [DEMO](https://react-editor-five.vercel.app/)
 ===========================================
 
 This project is a mini constructor that allows you to create, delete, edit, and rearrange blocks. It's built using React with TypeScript and utilizes the Vite build tool for a fast development experience.
+
+
+Technologies
+-------------------
+-   React
+-   TypeScript
+-   Vite
+-   Redux
+-   SCSS
+-   Express js
+-   Axios
 
 Project Description
 -------------------
