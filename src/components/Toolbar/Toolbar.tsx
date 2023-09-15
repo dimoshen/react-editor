@@ -21,18 +21,19 @@ export const Toolbar: FC<Props> = ({ itemId }) => {
 
   const handleMoveUp = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
-    console.log('Move Up');
-    // Тут можна додати логіку для переміщення вгору
+    event.stopPropagation();
+    dispatch(actions.moveUp(itemId));
   };
   
   const handleMoveDown = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
-    console.log('Move Down');
-    // Тут можна додати логіку для переміщення вниз
+    event.stopPropagation();
+    dispatch(actions.moveDown(itemId));
   };
   
   const handleClone = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
+    event.stopPropagation();
     const itemToClone = items.find(item => item.id === itemId);
     if (itemToClone) {
       const clonedItem = { ...itemToClone, id: uuidv4() };
@@ -42,6 +43,7 @@ export const Toolbar: FC<Props> = ({ itemId }) => {
   
   const handleDelete = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
+    event.stopPropagation();
     dispatch(actions.remove(itemId));
   };
 
