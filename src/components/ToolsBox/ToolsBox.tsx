@@ -1,12 +1,12 @@
 import { FC, useState, useEffect } from 'react';
 import * as itemsApi from '../../api/items';
-import { ToolBoxItem } from '../ToolBoxItem/ToolBoxItem';
 import { ToolType } from '../../types/ToolType';
 
-import './ToolBox.scss';
+import './ToolsBox.scss';
+import { ToolsBoxItem } from '../ToolsBoxItem/ToolsBoxItem';
 
 
-export const ToolBox: FC = () => {
+export const ToolsBox: FC = () => {
   const [tools, setTools] = useState<ToolType[]>([]);
 
   useEffect(() => {
@@ -17,9 +17,9 @@ export const ToolBox: FC = () => {
   }, [])
 
   return (
-    <div className="ToolBox">
+    <div className="ToolsBox">
       {tools.map(tool => (
-        <ToolBoxItem key={tool} toolType={tool} />
+        <ToolsBoxItem key={tool} toolType={tool} />
       ))}
     </div>
   );

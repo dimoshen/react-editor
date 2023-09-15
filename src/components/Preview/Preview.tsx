@@ -15,15 +15,15 @@ export const Preview: FC = () => {
   return (
     <div className="Preview">
       {items.map((item) => {
-        switch (item) {
+        switch (item.toolName) {
           case 'headline':
-            return <Headline key={item} />;
+            return <Headline key={item.id} />;
           case 'image':
-            return <Image key={item} />;
+            return <Image key={item.id} />;
           case 'paragraph':
-            return <Paragraph key={item} />;
+            return <Paragraph key={item.id} />;
           case 'button':
-            return <Button key={item} />;
+            return <Button key={item.id} />;
           default:
             return null;
         }

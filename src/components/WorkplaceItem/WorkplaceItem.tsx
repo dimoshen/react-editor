@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import classNames from 'classnames';
 import { Icon } from '../Icon/Icon';
 import { ToolType } from '../../types/ToolType';
@@ -8,17 +8,16 @@ import './WorkplaceItem.scss';
 
 interface Props {
   toolType: ToolType;
+  isActive: boolean;
+  onActivate: () => void;
 }
 
-export const WorkplaceItem: FC<Props> = ({ toolType }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleActivate = () => {
-    setIsActive(!isActive);
-  };
-
+export const WorkplaceItem: FC<Props> = ({ toolType, isActive, onActivate }) => {
   return (
-    <div className={classNames("WorkplaceItem", { 'active': isActive })} onClick={handleActivate}>
+    <div
+      className={classNames("WorkplaceItem", { 'active': isActive })}
+      onClick={onActivate}
+    >
       {isActive && (
         <Toolbar />
       )}

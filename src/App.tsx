@@ -1,14 +1,14 @@
 import './App.scss'
 import { Header } from './components/Header';
 import { Preview } from './components/Preview';
-import { ToolBox } from './components/ToolBox';
+import { ToolsBox } from './components/ToolsBox';
 import { Workspace } from './components/Workspace';
 
 const App = () => (
   <>
     <Header />
     <div className="container">
-      <ToolBox />
+      <ToolsBox />
       <Workspace />
       <Preview />
     </div>
