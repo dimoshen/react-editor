@@ -10,7 +10,7 @@ import { useAppSelector } from '../../redux/hooks/hooks';
 import './Preview.scss';
 
 export const Preview: FC = () => {
-  const { items } = useAppSelector(state => state.items)
+  const { items } = useAppSelector(state => state.items);
 
   return (
     <div className="Preview">

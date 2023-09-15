@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { Icon } from '../Icon/Icon';
-import { ToolType } from '../../types/ToolType';
-
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { actions } from '../../redux/features/items';
 import { v4 as uuidv4 } from 'uuid';
+
+import { Icon } from '../Icon/Icon';
+import { ToolType } from '../../types/ToolType';
 
 import './ToolsBoxItem.scss';
 

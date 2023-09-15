@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo  } from 'react';
 import classNames from 'classnames';
 import { Icon } from '../Icon/Icon';
 import { ToolType } from '../../types/ToolType';
@@ -14,7 +14,12 @@ interface Props {
   itemId: string;
 }
 
-export const WorkplaceItem: FC<Props> = ({ toolType, isActive, onActivate, itemId }) => {
+export const WorkplaceItem: FC<Props> = memo(({
+  toolType,
+  isActive,
+  onActivate,
+  itemId
+}) => {
   return (
     <div
       className={classNames("WorkplaceItem", { 'active': isActive })}
@@ -32,4 +37,4 @@ export const WorkplaceItem: FC<Props> = ({ toolType, isActive, onActivate, itemI
       )}
     </div>
   );
-};
+});

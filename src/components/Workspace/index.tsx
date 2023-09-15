@@ -1,1 +1,1 @@
-export * from './Workspace';
+export { Workspace } from './Workspace';

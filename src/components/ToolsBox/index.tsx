@@ -1,1 +1,1 @@
-export * from './ToolsBox';
+export { ToolsBox } from './ToolsBox';

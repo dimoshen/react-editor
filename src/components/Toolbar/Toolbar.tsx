@@ -19,16 +19,10 @@ export const Toolbar: FC<Props> = ({ itemId }) => {
 
   const dispatch = useAppDispatch();
 
-  const handleMoveUp = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleMoveUpOrDown = (event: React.MouseEvent<HTMLAnchorElement>, action: 'up' | 'down') => {
     event.preventDefault();
     event.stopPropagation();
-    dispatch(actions.moveUp(itemId));
-  };
-  
-  const handleMoveDown = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    dispatch(actions.moveDown(itemId));
+    dispatch(action === 'up' ? actions.moveUp(itemId) : actions.moveDown(itemId));
   };
   
   const handleClone = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -50,10 +44,10 @@ export const Toolbar: FC<Props> = ({ itemId }) => {
   return (
     <div className="Toolbar">
       <div className="Toolbar__item navigation">
-        <a className="Toolbar__button" href="" onClick={handleMoveDown}>
+        <a className="Toolbar__button" href="" onClick={(e) => handleMoveUpOrDown(e, 'down')}>
           <img src={moveDown} alt="move down" />
         </a>
-        <a className="Toolbar__button" href="" onClick={handleMoveUp}>
+        <a className="Toolbar__button" href="" onClick={(e) => handleMoveUpOrDown(e, 'up')}>
           <img src={moveUp} alt="move up" />
         </a>
       </div>

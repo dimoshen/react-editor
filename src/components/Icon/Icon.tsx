@@ -6,8 +6,6 @@ import image from '../../assets/icons/image.svg';
 import paragparh from '../../assets/icons/paragraph.svg';
 import { ToolType } from '../../types/ToolType';
 
-import './Icon.scss';
-
 interface Props {
   children?: ReactNode;
   size: number;

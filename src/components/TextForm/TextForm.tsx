@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { actions } from '../../redux/features/items';
 
@@ -10,7 +10,11 @@ interface Props {
 
 export const TextForm: FC<Props> = ({ itemId }) => {
   const { items } = useAppSelector(state => state.items);
-  const itemContent = items.find((item => item.id === itemId))?.content || '';
+
+  const itemContent = useCallback(() => {
+    return items.find((item) => item.id === itemId)?.content || '';
+  }, [items, itemId]);
+
   const [content, setContent] = useState(itemContent);
   
   const dispatch = useAppDispatch();

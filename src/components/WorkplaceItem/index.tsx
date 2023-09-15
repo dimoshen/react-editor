@@ -1,1 +1,1 @@
-export * from './WorkplaceItem';
+export { WorkplaceItem } from './WorkplaceItem';

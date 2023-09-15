@@ -5,9 +5,11 @@
   top: 0;
   padding-left: 30px;
   display: flex;
+  background-color: #FFFFFF;
   border: 1px solid #E4E6F1;
   border-top-left-radius: 16px;
-  border-top-right-radius: 16px; 
+  border-top-right-radius: 16px;
+  z-index: 1;
 
   &__title {
     height: $header-height;

@@ -4,13 +4,8 @@
   text-align: center;
 };
 
-body {
-  height: 100vh;
-  overflow: hidden;
-}
-
 .container {
-  height: 100vh;
+  min-height: 800px;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   align-items: start;
