@@ -10,16 +10,17 @@ interface Props {
   toolType: ToolType;
   isActive: boolean;
   onActivate: () => void;
+  itemId: string;
 }
 
-export const WorkplaceItem: FC<Props> = ({ toolType, isActive, onActivate }) => {
+export const WorkplaceItem: FC<Props> = ({ toolType, isActive, onActivate, itemId }) => {
   return (
     <div
       className={classNames("WorkplaceItem", { 'active': isActive })}
       onClick={onActivate}
     >
       {isActive && (
-        <Toolbar />
+        <Toolbar itemId={itemId}/>
       )}
       <Icon size={20} type={toolType} />
       <div className="WorkplaceItem__title">

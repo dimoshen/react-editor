@@ -1,21 +1,40 @@
+@import "../../styles/utils/variables";
+
 .Toolbar {
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 5px;
+  top: -$toolbar-height;
+  right: 5px; 
   display: flex;
   gap: 5px;
 
-  button {
-    padding: 5px;
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
+  &__item {
+    width: 50px;
+    height: $toolbar-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #68C2E9;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: #e0e0e0;
+      background-color: rgba(0, 0, 0, 0.3);
     }
+  }
+  .navigation {
+    background-color: #449CF4;
+  }
+  .edit {
+    background-color: #68C2E9;  
   }
 }

@@ -1,6 +1,7 @@
 @import "../../styles/utils/variables";
 
 .WorkplaceItem {
+  position: relative;
   height: 80px;
   display: flex;
   flex-direction: column;

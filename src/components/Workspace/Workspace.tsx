@@ -49,6 +49,7 @@ export const Workspace: FC = () => {
                     {...provided.dragHandleProps}
                   >
                     <WorkplaceItem 
+                      itemId={item.id}
                       toolType={item.toolName} 
                       isActive={item.id === activeItemId} 
                       onActivate={() => handleActivate(item.id)} 
