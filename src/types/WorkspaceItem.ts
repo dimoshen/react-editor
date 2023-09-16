@@ -1,4 +1,4 @@
-import { ToolType } from "./ToolType";
+import { ToolType } from "./Item";
 
 export type WorkspaceItem = {
   id: string;
