@@ -1,4 +1,4 @@
-type ToolType = 'headline' | 'image' | 'paragraph' | 'button';
+export type ToolType = 'headline' | 'image' | 'paragraph' | 'button';
 
 export interface Item {
   id: number;

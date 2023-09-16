@@ -1,7 +1,7 @@
 import { FC, memo  } from 'react';
 import classNames from 'classnames';
 import { Icon } from '../Icon/Icon';
-import { ToolType } from '../../types/ToolType';
+import { ToolType } from '../../types/Item';
 import { Toolbar } from '../Toolbar';
 
 import './WorkplaceItem.scss';
