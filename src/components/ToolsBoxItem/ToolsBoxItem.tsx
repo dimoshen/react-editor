@@ -3,9 +3,11 @@ import { useAppDispatch } from '../../redux/hooks/hooks';
 import { actions } from '../../redux/features/items';
 import { v4 as uuidv4 } from 'uuid';
 import { ToolType } from '../../types/Item';
+import { WorkspaceItem } from '../../types/WorkspaceItem';
 import { Icon } from '../Icon/Icon';
 
 import './ToolsBoxItem.scss';
+
 
 
 interface Props {
@@ -16,7 +18,7 @@ export const ToolsBoxItem: FC<Props> = ({toolType}) => {
   const dispatch = useAppDispatch();
 
   const handleAddNewItem = () => {
-    const newItem = {
+    const newItem: WorkspaceItem = {
       id: uuidv4(),
       toolName: toolType,
       content:'',

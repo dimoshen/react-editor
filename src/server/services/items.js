@@ -1,10 +1,11 @@
 import pkg from 'pg';
+
 const { Client } = pkg;
 
 const client = new Client({
-  host: 'localhost',
-  user: 'postgres',
-  password:'327563778887_'
+  host: "localhost",
+  user: "postgres",
+  password: "12345678",
 })
 
 await client.connect()
@@ -14,7 +15,7 @@ export async function getAll() {
     SELECT *
     FROM items
   `);
-  
+
   return result.rows;
 }
  
