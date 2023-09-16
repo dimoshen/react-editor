@@ -2,13 +2,14 @@ import { FC } from 'react';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { actions } from '../../redux/features/items';
 import { v4 as uuidv4 } from 'uuid';
-
+import { ToolType } from '../../types/Item';
 import { Icon } from '../Icon/Icon';
 
 import './ToolsBoxItem.scss';
 
+
 interface Props {
-  toolType: string;
+  toolType: ToolType;
 }
 
 export const ToolsBoxItem: FC<Props> = ({toolType}) => {
