@@ -1,4 +1,3 @@
-
 import ReactDOM from 'react-dom/client'
 import { ReduxProvider } from './redux/provider.tsx'
 import App from './App.tsx'

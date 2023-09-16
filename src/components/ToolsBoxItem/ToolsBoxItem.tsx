@@ -4,12 +4,11 @@ import { actions } from '../../redux/features/items';
 import { v4 as uuidv4 } from 'uuid';
 
 import { Icon } from '../Icon/Icon';
-import { ToolType } from '../../types/ToolType';
 
 import './ToolsBoxItem.scss';
 
 interface Props {
-  toolType: ToolType;
+  toolType: string;
 }
 
 export const ToolsBoxItem: FC<Props> = ({toolType}) => {
