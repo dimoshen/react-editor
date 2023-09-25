@@ -1,21 +1,11 @@
-import pkg from 'pg';
+import { sql } from '@vercel/postgres';
 
-const { Client } = pkg;
+export default async function getAll(request, response) {
+  try {
+    const result = await sql`SELECT * FROM items`;
 
-const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  password: "12345678",
-})
-
-await client.connect()
-
-export async function getAll() {
-  const result = await client.query(`
-    SELECT *
-    FROM items
-  `);
-
-  return result.rows;
+    return response.status(200).json({ items: result.rows });
+  } catch (error) {
+    return response.status(500).json({ error });
+  }
 }
- 
