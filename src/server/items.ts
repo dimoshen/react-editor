@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Item } from '../src/types/Item';
+import { Item } from '../types/Item';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 

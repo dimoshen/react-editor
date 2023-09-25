@@ -1,5 +1,5 @@
 import { FC, useState, useEffect, useMemo } from 'react';
-import * as itemsApi from '../../../api/items';
+import * as itemsApi from '../../server/items';
 import { Item } from '../../types/Item';
 import { ToolsBoxItem } from '../ToolsBoxItem/ToolsBoxItem';
 
