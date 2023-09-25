@@ -13,3 +13,5 @@ app.get('/items', todoController.getAll);
 app.listen(5000, () => {
   console.log(`Server is running on ${5000}`);
 });
+
+export default app;
